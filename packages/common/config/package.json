@@ -1,0 +1,13 @@
+{
+  "name": "@project/common-config",
+  "version": "1.0.0",
+  "description": "Common configurations for monorepo: typescript, eslint, prettier etc.",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "nohoist": [
+      "**"
+    ]
+  }
+}

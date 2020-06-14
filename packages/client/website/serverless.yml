@@ -1,0 +1,6 @@
+# serverless.yml
+
+website:
+  app: serverless-skeleton
+  name: website
+  component: serverless-next.js
