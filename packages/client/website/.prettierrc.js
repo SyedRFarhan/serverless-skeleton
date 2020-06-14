@@ -1,4 +1,5 @@
+const config = require('@project/common-config');
+
 module.exports = {
-  singleQuote: true,
-  printWidth: 80,
+  ...config.prettier,
 };
