@@ -1,3 +1,5 @@
+const config = require('@project/common-config');
+
 module.exports = {
   extends: [require.resolve('@umijs/fabric/dist/eslint')],
   globals: {
