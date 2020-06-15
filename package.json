@@ -4,7 +4,7 @@
   "scripts": {
     "start:admin": "yarn workspace @project/admin start",
     "start:website": "yarn workspace @project/website dev",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
   },
   "devDependencies": {
     "lerna": "^3.22.1"
@@ -23,5 +23,8 @@
       "packages/common/config/",
       "packages/common/config/**"
     ]
+  },
+  "dependencies": {
+    "serverless": "^1.72.0"
   }
 }

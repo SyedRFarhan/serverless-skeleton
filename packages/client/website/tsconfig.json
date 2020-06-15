@@ -1,31 +1,39 @@
 {
   "compilerOptions": {
-     "module": "esnext",
-     "target": "esnext",
-     "lib": [
-        "esnext",
-        "dom"
-     ],
-     "sourceMap": true,
-     "baseUrl": ".",
-     "jsx": "react",
-     "resolveJsonModule": true,
-     "allowJs": true,
-     "skipLibCheck": true,
-     "strict": true,
-     "experimentalDecorators": true,
-     "allowSyntheticDefaultImports": true,
-     "moduleResolution": "node",
-     "forceConsistentCasingInFileNames": true,
-     "noImplicitReturns": true
+    "module": "esnext",
+    "target": "esnext",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "sourceMap": true,
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "isolatedModules": true
   },
   "exclude": [
-     "node_modules",
-     "build",
-     "dist",
-     "scripts",
-     "src/.umi/*",
-     "webpack",
-     "jest"
+    "node_modules",
+    "build",
+    "dist",
+    "scripts",
+    "src/.umi/*",
+    "webpack",
+    "jest"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
   ]
 }

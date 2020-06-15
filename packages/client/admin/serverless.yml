@@ -1,0 +1,9 @@
+component: website
+app: serverless-skeleton
+name: admin
+stage: dev
+
+inputs:
+  src:
+    hook: npm run build
+    dist: ./dist
