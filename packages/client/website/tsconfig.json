@@ -8,19 +8,33 @@
     ],
     "sourceMap": true,
     "baseUrl": ".",
+
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+
     "jsx": "preserve",
     "resolveJsonModule": true,
     "allowJs": true,
     "skipLibCheck": true,
+
     "strict": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+
     "noEmit": true,
-    "esModuleInterop": true,
-    "isolatedModules": true
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+
+
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": false,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization":false,
   },
   "exclude": [
     "node_modules",
