@@ -34,6 +34,11 @@ describe('Testing APILambdaDynamodbCrud infastructure stack.', () => {
     });
   });
 
+  /*
+  When you need to create a new resource first google the cloud formation doc for it.
+  Create an `toHaveResource` assertion against the cloudformaton resource name `AWS::--RESOURCE--::--SUBS--`
+  and additionally properties you may need in an object as the second arg.
+  */
   test('An APIGateway should be created.', () => {
     const stack = initStack();
 
