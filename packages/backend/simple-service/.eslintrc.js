@@ -1,4 +1,4 @@
-const config = require('@project/common-config');
+import config = require('@project/common-config');
 
 module.exports = {
   ...config.eslint,
