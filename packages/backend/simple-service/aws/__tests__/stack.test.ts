@@ -15,11 +15,20 @@ function initStack() {
   return serviceStack;
 }
 
+// describe('Device Service infrastructure stack', () => {
+//   describe('dynamodb', () => {
+//     test('A table with the name `devices` should be created', () => {
+//       const stack = initStack();
+//       expect(stack).
+//     });
+//   });
+// });
+
 describe('Testing APILambdaDynamodbCrud infastructure stack.', () => {
-  test.skip('CloudFormation snapshot (example)', () => {
-    const stack = initStack();
-    expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();
-  });
+  // test.skip('CloudFormation snapshot (example)', () => {
+  //   const stack = initStack();
+  //   expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();
+  // });
 
   test('A dynamodb table with itemId as its primary key should be created.', () => {
     const stack = initStack();
