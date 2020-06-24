@@ -9,7 +9,9 @@
     ]
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "deploy": "yarn test && cdk deploy"
   },
   "devDependencies": {
     "@aws-cdk/assert": "^1.46.0",
