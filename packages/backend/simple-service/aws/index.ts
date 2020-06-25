@@ -1,7 +1,7 @@
 import * as cdk from '@aws-cdk/core';
 
-import { ApiLambdaCrudDynamoDBStack } from './stack';
+import { QuoteServiceStack } from './QuoteServiceStack';
 
 const app = new cdk.App();
-new ApiLambdaCrudDynamoDBStack(app, 'ApiLambdaCrudDynamoDBExample');
+new QuoteServiceStack(app, 'QuoteServiceStack');
 app.synth();
