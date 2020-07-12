@@ -25,7 +25,7 @@ export class QuoteServiceStack extends cdk.Stack {
       handler: 'getDeviceBrands.default',
     });
 
-    const apigateway = new apigateway2.HttpApi(this, 'quote-api', {
+    const api = new apigateway2.HttpApi(this, 'quote-api', {
       apiName: 'quote-api',
     });
   }

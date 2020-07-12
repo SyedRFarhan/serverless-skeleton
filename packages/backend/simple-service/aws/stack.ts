@@ -5,6 +5,7 @@ import * as dynamodb from '@aws-cdk/aws-dynamodb';
 
 import { addCorsOptions } from './cors';
 
+const test = 'whatever';
 export class ApiLambdaCrudDynamoDBStack extends cdk.Stack {
   constructor(app: cdk.App, id: string) {
     super(app, id);

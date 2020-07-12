@@ -30,7 +30,7 @@ describe('Quote Service infrastructure stack', () => {
   //   });
   // });
 
-  describe('service api', () => {
+  describe('Quote Service API', () => {
     test('An API Gateway construct called `quote-api` should be created', () => {
       const stack = initStack();
 
