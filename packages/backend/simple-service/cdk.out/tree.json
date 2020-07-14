@@ -1,0 +1,196 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "QuoteServiceStack": {
+        "id": "QuoteServiceStack",
+        "path": "QuoteServiceStack",
+        "children": {
+          "getDeviceBrands": {
+            "id": "getDeviceBrands",
+            "path": "QuoteServiceStack/getDeviceBrands",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "QuoteServiceStack/getDeviceBrands/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "QuoteServiceStack/getDeviceBrands/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "QuoteServiceStack/getDeviceBrands/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "QuoteServiceStack/getDeviceBrands/Code/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "QuoteServiceStack/getDeviceBrands/Code/AssetBucket"
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "QuoteServiceStack/getDeviceBrands/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameters5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863S3Bucket50A79909"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863S3VersionKey55CFE893"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863S3VersionKey55CFE893"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "handler": "getDeviceBrands.default",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "getDeviceBrandsServiceRole3F5D78C5",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "nodejs12.x"
+                  }
+                }
+              }
+            }
+          },
+          "AssetParameters": {
+            "id": "AssetParameters",
+            "path": "QuoteServiceStack/AssetParameters",
+            "children": {
+              "5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863": {
+                "id": "5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863",
+                "path": "QuoteServiceStack/AssetParameters/5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "QuoteServiceStack/AssetParameters/5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "QuoteServiceStack/AssetParameters/5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "QuoteServiceStack/AssetParameters/5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863/ArtifactHash"
+                  }
+                }
+              }
+            }
+          },
+          "quote-api": {
+            "id": "quote-api",
+            "path": "QuoteServiceStack/quote-api",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "QuoteServiceStack/quote-api/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Api",
+                  "aws:cdk:cloudformation:props": {
+                    "name": "quote-api",
+                    "protocolType": "HTTP"
+                  }
+                }
+              },
+              "DefaultStage": {
+                "id": "DefaultStage",
+                "path": "QuoteServiceStack/quote-api/DefaultStage",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "QuoteServiceStack/quote-api/DefaultStage/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Stage",
+                      "aws:cdk:cloudformation:props": {
+                        "apiId": {
+                          "Ref": "quoteapi52F655B6"
+                        },
+                        "stageName": "$default",
+                        "autoDeploy": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

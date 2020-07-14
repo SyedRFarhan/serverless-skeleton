@@ -4,18 +4,21 @@
   "scripts": {
     "start:admin": "yarn workspace @project/admin start",
     "start:website": "yarn workspace @project/website dev",
-    "publish": "lerna publish",
+    "publish": "lerna publish"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
   },
   "workspaces": {
     "packages": [
+      "packages/backend/simple-service",
       "packages/client/admin/",
       "packages/client/website/",
       "packages/common/config/"
     ],
     "nohoist": [
+      "packages/backend/simple-service",
+      "packages/backend/simple-service/**",
       "packages/client/admin",
       "packages/client/admin/**",
       "packages/client/website",

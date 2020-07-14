@@ -1,0 +1,289 @@
+{
+  "version": "5.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "QuoteServiceStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "QuoteServiceStack.template.json"
+      },
+      "metadata": {
+        "/QuoteServiceStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863",
+              "id": "5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863",
+              "packaging": "zip",
+              "sourceHash": "5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863",
+              "s3BucketParameter": "AssetParameters5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863S3Bucket50A79909",
+              "s3KeyParameter": "AssetParameters5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863S3VersionKey55CFE893",
+              "artifactHashParameter": "AssetParameters5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863ArtifactHash5001C2FC"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/construct-compat.ts:405:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:152:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:69:19)",
+              "QuoteServiceStack.addFileAsset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/stack.ts:599:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:73:25)",
+              "new Asset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:138:40)",
+              "AssetCode.bind (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/aws-lambda/lib/function.ts:502:29)",
+              "new QuoteServiceStack (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/aws/QuoteServiceStack.ts:22:29)",
+              "Object.<anonymous> (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/aws/index.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1200:30)",
+              "Module.m._compile (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1220:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1049:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:937:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1200:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1220:10)",
+              "Module.load (internal/modules/cjs/loader.js:1049:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:937:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/syed/.nvm/versions/node/v14.4.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/QuoteServiceStack/getDeviceBrands/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "getDeviceBrandsServiceRole3F5D78C5",
+            "trace": [
+              "new Role (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/aws-iam/lib/role.ts:319:18)",
+              "new Function (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/aws-lambda/lib/function.ts:492:31)",
+              "new QuoteServiceStack (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/aws/QuoteServiceStack.ts:22:29)",
+              "Object.<anonymous> (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/aws/index.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1200:30)",
+              "Module.m._compile (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1220:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1049:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:937:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1200:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1220:10)",
+              "Module.load (internal/modules/cjs/loader.js:1049:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:937:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/syed/.nvm/versions/node/v14.4.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/QuoteServiceStack/getDeviceBrands/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "getDeviceBrands64FE49E4",
+            "trace": [
+              "new Function (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/aws-lambda/lib/function.ts:507:35)",
+              "new QuoteServiceStack (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/aws/QuoteServiceStack.ts:22:29)",
+              "Object.<anonymous> (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/aws/index.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1200:30)",
+              "Module.m._compile (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1220:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1049:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:937:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1200:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1220:10)",
+              "Module.load (internal/modules/cjs/loader.js:1049:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:937:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/syed/.nvm/versions/node/v14.4.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/QuoteServiceStack/AssetParameters/5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863S3Bucket50A79909",
+            "trace": [
+              "new FileAssetParameters (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:139:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:69:19)",
+              "QuoteServiceStack.addFileAsset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/stack.ts:599:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:73:25)",
+              "new Asset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:138:40)",
+              "AssetCode.bind (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/aws-lambda/lib/function.ts:502:29)",
+              "new QuoteServiceStack (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/aws/QuoteServiceStack.ts:22:29)",
+              "Object.<anonymous> (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/aws/index.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1200:30)",
+              "Module.m._compile (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1220:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1049:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:937:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1200:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1220:10)",
+              "Module.load (internal/modules/cjs/loader.js:1049:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:937:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/syed/.nvm/versions/node/v14.4.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/QuoteServiceStack/AssetParameters/5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863S3VersionKey55CFE893",
+            "trace": [
+              "new FileAssetParameters (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:139:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:69:19)",
+              "QuoteServiceStack.addFileAsset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/stack.ts:599:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:73:25)",
+              "new Asset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:138:40)",
+              "AssetCode.bind (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/aws-lambda/lib/function.ts:502:29)",
+              "new QuoteServiceStack (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/aws/QuoteServiceStack.ts:22:29)",
+              "Object.<anonymous> (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/aws/index.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1200:30)",
+              "Module.m._compile (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1220:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1049:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:937:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1200:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1220:10)",
+              "Module.load (internal/modules/cjs/loader.js:1049:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:937:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/syed/.nvm/versions/node/v14.4.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/QuoteServiceStack/AssetParameters/5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863ArtifactHash5001C2FC",
+            "trace": [
+              "new FileAssetParameters (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:139:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:69:19)",
+              "QuoteServiceStack.addFileAsset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/stack.ts:599:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:73:25)",
+              "new Asset (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:138:40)",
+              "AssetCode.bind (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/aws-lambda/lib/function.ts:502:29)",
+              "new QuoteServiceStack (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/aws/QuoteServiceStack.ts:22:29)",
+              "Object.<anonymous> (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/aws/index.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1200:30)",
+              "Module.m._compile (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1220:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1049:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:937:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1200:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1220:10)",
+              "Module.load (internal/modules/cjs/loader.js:1049:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:937:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/syed/.nvm/versions/node/v14.4.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/QuoteServiceStack/quote-api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "quoteapi52F655B6",
+            "trace": [
+              "new HttpApi (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/aws-apigatewayv2/lib/http/api.ts:154:22)",
+              "new QuoteServiceStack (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/aws/QuoteServiceStack.ts:28:24)",
+              "Object.<anonymous> (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/aws/index.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1200:30)",
+              "Module.m._compile (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1220:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1049:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:937:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1200:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1220:10)",
+              "Module.load (internal/modules/cjs/loader.js:1049:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:937:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/syed/.nvm/versions/node/v14.4.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/QuoteServiceStack/quote-api/DefaultStage/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "quoteapiDefaultStage60DC71CD",
+            "trace": [
+              "new HttpStage (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/aws-apigatewayv2/lib/http/stage.ts:47:5)",
+              "new HttpApi (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/@aws-cdk/aws-apigatewayv2/lib/http/api.ts:166:27)",
+              "new QuoteServiceStack (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/aws/QuoteServiceStack.ts:28:24)",
+              "Object.<anonymous> (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/aws/index.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1200:30)",
+              "Module.m._compile (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1220:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1049:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:937:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/syed/workspace/projects/serverless-skeleton/packages/backend/simple-service/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1200:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1220:10)",
+              "Module.load (internal/modules/cjs/loader.js:1049:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:937:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/syed/.nvm/versions/node/v14.4.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.46.0",
+      "@aws-cdk/cx-api": "1.46.0",
+      "@aws-cdk/cloud-assembly-schema": "1.46.0",
+      "@aws-cdk/cdk-assets-schema": "1.46.0",
+      "@aws-cdk/aws-apigatewayv2": "1.46.0",
+      "@aws-cdk/aws-iam": "1.46.0",
+      "@aws-cdk/region-info": "1.46.0",
+      "@aws-cdk/aws-lambda": "1.46.0",
+      "@aws-cdk/aws-cloudwatch": "1.46.0",
+      "@aws-cdk/aws-ec2": "1.46.0",
+      "@aws-cdk/aws-ssm": "1.46.0",
+      "@aws-cdk/aws-logs": "1.46.0",
+      "@aws-cdk/aws-s3": "1.46.0",
+      "@aws-cdk/aws-events": "1.46.0",
+      "@aws-cdk/aws-kms": "1.46.0",
+      "@aws-cdk/aws-sqs": "1.46.0",
+      "@aws-cdk/aws-s3-assets": "1.46.0",
+      "@aws-cdk/assets": "1.46.0",
+      "jsii-runtime": "node.js/v14.4.0"
+    }
+  }
+}

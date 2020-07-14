@@ -1,0 +1,134 @@
+{
+  "Resources": {
+    "getDeviceBrandsServiceRole3F5D78C5": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "QuoteServiceStack/getDeviceBrands/ServiceRole/Resource"
+      }
+    },
+    "getDeviceBrands64FE49E4": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863S3Bucket50A79909"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863S3VersionKey55CFE893"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863S3VersionKey55CFE893"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "getDeviceBrands.default",
+        "Role": {
+          "Fn::GetAtt": [
+            "getDeviceBrandsServiceRole3F5D78C5",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs12.x"
+      },
+      "DependsOn": [
+        "getDeviceBrandsServiceRole3F5D78C5"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "QuoteServiceStack/getDeviceBrands/Resource",
+        "aws:asset:path": "asset.5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863",
+        "aws:asset:property": "Code"
+      }
+    },
+    "quoteapi52F655B6": {
+      "Type": "AWS::ApiGatewayV2::Api",
+      "Properties": {
+        "Name": "quote-api",
+        "ProtocolType": "HTTP"
+      },
+      "Metadata": {
+        "aws:cdk:path": "QuoteServiceStack/quote-api/Resource"
+      }
+    },
+    "quoteapiDefaultStage60DC71CD": {
+      "Type": "AWS::ApiGatewayV2::Stage",
+      "Properties": {
+        "ApiId": {
+          "Ref": "quoteapi52F655B6"
+        },
+        "StageName": "$default",
+        "AutoDeploy": true
+      },
+      "Metadata": {
+        "aws:cdk:path": "QuoteServiceStack/quote-api/DefaultStage/Resource"
+      }
+    }
+  },
+  "Parameters": {
+    "AssetParameters5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863S3Bucket50A79909": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863\""
+    },
+    "AssetParameters5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863S3VersionKey55CFE893": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863\""
+    },
+    "AssetParameters5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863ArtifactHash5001C2FC": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"5ac70edabf6dd8629c9a78e53a934d4979e2a8869c87bf06b3a9057211a0b863\""
+    }
+  }
+}

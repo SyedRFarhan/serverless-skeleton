@@ -3,9 +3,12 @@
   "packages": [
     "packages/client/admin",
     "packages/client/website",
-    "packages/common/config"
+    "packages/common/config",
+    "packages/backend/simple-service"
   ],
   "nohoist": [
+    "packages/backend/simple-service",
+    "packages/backend/simple-service/**",
     "packages/client/admin",
     "packages/client/admin/**",
     "packages/client/website",
