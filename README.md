@@ -26,4 +26,4 @@
 
 1. Clone this repo using SSH
 2. At the root of the repo run 'yarn' to install dependencies for the monorepo
-3. Create a `.env` file and add
+3. Create a `.env` file and add your aws credentials.
